@@ -1,12 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-
+<div class="avatar">
+	<img alt src="https://www.w3.org/thumbnails/200/avatar-images/7mtpjeh4in8kw04ksso8ss4ocsksswo.webp" loading="lazy">
+</div>
 
 <%= render @client %>
-
-<div>
-  <%= link_to "Edit this client", edit_client_path(@client) %> |
-  <%= link_to "Back to clients", clients_path %>
-
-  <%= button_to "Destroy this client", @client, method: :delete %>
-</div>
