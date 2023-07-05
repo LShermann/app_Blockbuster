@@ -1,7 +1,7 @@
 databases:
-  - name: BlockBuster
-    databaseName: blockbuster_development
-    user: userdb
+  - name: mysite
+    databaseName: mysite
+    user: mysite
 
 services:
   - type: web
@@ -10,9 +10,9 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: postgres://userdb:gR7JeF1SFkH5PezT9CQIBasDzOHqSH1a@dpg-ciiuuop5rnut2s9gn7i0-a/blockbuster_development
+      - key: DATABASE_URL
         fromDatabase:
-          name: BlockBuster
+          name: mysite
           property: connectionString
-      - key: 8fbb910a3aeb75eda72b1fbff4190448
+      - key: RAILS_MASTER_KEY
         sync: false
